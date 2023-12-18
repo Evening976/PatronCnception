@@ -1,6 +1,6 @@
 package patron.visitordecorator;
 
-public class PrintItemVisitor implements ItemVisitor<String> {
+public class CartItemsVisitor implements ItemVisitor<String> {
     @Override
     public String visit(Book book) {
         return book.name() + " " + book.price() + " " + book.numberOfpages() + " pages";

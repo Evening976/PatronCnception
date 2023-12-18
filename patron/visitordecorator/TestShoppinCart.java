@@ -10,7 +10,7 @@ public class TestShoppinCart {
         pizza.name = "frozen pizza";
         pizza.price = 6;
         ShoppingCart cart = new ShoppingCart();
-        PrintItemVisitor visitor = new PrintItemVisitor();
+        CartItemsVisitor visitor = new CartItemsVisitor();
         cart.addItem(book);
         cart.addItem(pizza);
         String string = visitor.print(cart);

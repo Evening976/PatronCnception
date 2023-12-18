@@ -1,10 +1,10 @@
 package patron.visitordecorator;
 
 public abstract class PrintItemDecorator {
-    protected PrintItemVisitor printItemVisitor = new PrintItemVisitor();
+    protected CartItemsVisitor visitor = new CartItemsVisitor();
     public String print(ShoppingCart cart) {
         String s = "";
-        s += printItemVisitor.print(cart);
+        s += visitor.print(cart);
         return s + description();
     }
 
