@@ -1,6 +1,6 @@
 package patron.visitordecorator;
 
-public class PrintItemVisitor implements Visitor<String> {
+public class PrintItemVisitor implements ItemVisitor<String> {
     @Override
     public String visit(Book book) {
         return book.name() + " " + book.price() + " " + book.numberOfpages() + " pages";
@@ -17,5 +17,13 @@ public class PrintItemVisitor implements Visitor<String> {
             string += item.accept(this) + "\n";
         }
         return string;
+    }
+
+    public double total(ShoppingCart cart){
+        double total = 0;
+        for(Item item: cart.items()){
+            total += item.price();
+        }
+        return total;
     }
 }

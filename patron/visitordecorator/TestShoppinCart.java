@@ -15,5 +15,10 @@ public class TestShoppinCart {
         cart.addItem(pizza);
         String string = visitor.print(cart);
         System.out.println(string);
+        WarmDecorator a = new WarmDecorator();
+        CompositeDecorator d = new CompositeDecorator(new WarmDecorator(), new TotalDecorator(cart));
+        String string1 = a.print(cart);
+        System.out.println(string1);
+        System.out.println(d.print(cart));
     }
 }

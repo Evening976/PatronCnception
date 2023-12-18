@@ -6,7 +6,7 @@ public class Book implements Item {
     public Double price() {return price;}
 
     @Override
-    public <T> T accept(Visitor<T> visitor) {
+    public <T> T accept(ItemVisitor<T> visitor) {
         return visitor.visit(this);
     }
 

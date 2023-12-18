@@ -19,7 +19,7 @@ public class Food implements Item {
     }
 
     @Override
-    public <T> T accept(Visitor<T> visitor) {
+    public <T> T accept(ItemVisitor<T> visitor) {
         return visitor.visit(this);
     }
 }

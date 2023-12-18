@@ -5,5 +5,5 @@ public interface Item {
 
     Double price();
 
-    <T> T accept(Visitor<T> visitor);
+    <T> T accept(ItemVisitor<T> visitor);
 }
