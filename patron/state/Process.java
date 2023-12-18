@@ -5,7 +5,8 @@ public interface Process {
     void handleSignal(String signal);
     boolean isReady();
     String getName();
-    State getState();
+    ProcessState getState();
+    void setState(ProcessState state);
     int getLastExecDate();
     boolean isOver();
 }
